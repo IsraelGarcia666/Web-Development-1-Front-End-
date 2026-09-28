@@ -1,0 +1,128 @@
+.highlight {
+  color: red;
+  background-color: #fff3d6;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Bonus Task 2: Alternative background */
+
+/* Axolotl background */
+
+body.alternate-background {
+  background-image: url("../images/Axolotl.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+/* Dark panels for workshop content */
+
+body.alternate-background header,
+body.alternate-background main > section {
+  background-color: rgba(0, 0, 0, 0.78);
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 12px;
+}
+
+/* Background image attribution */
+
+.background-credit {
+  display: none;
+}
+
+body.alternate-background .background-credit {
+  display: block;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.background-credit a {
+  color: #a8e6cf;
+  text-decoration: underline;
+}
+
+/* CSS for the animal content image section */
+#animalContent img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  display: block;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+/* CSS class animal heading for styling the heading of the animal content section */
+.animal-heading {
+  color: #1dae1f;
+  font-size: 24px;
+}
+
+/* Task 3: Image hover effect */
+
+#animalImage {
+  max-width: 350px;
+  height: auto;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.image-highlight {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(76, 200, 150, 0.8);
+}
+
+/* Final Bonus 1: Moving the animal image */
+
+#animalImage {
+  position: relative;
+  left: 0;
+
+  transition:
+    left 0.4s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.6s ease;
+}
+
+#animalImage.image-moved {
+  left: 60px;
+}
+
+/* Final Bonus 2: Floating animation */
+
+@keyframes animalFloat {
+  0% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -15px;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
+
+#animalImage.image-floating {
+  animation: animalFloat 2s ease-in-out infinite;
+}
+
+/* FINAL BONUS 3: Fade effect */
+
+#animalImage.image-faded {
+  opacity: 0;
+}
